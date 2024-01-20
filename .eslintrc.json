@@ -1,0 +1,9 @@
+{
+  "extends": ["next", "next/core-web-vitals", "eslint:recommended", "plugin:@typescript-eslint/strict-type-checked"],
+  "globals": {
+    "React": "readonly"
+  },
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  }
+}
