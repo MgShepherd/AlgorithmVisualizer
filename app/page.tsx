@@ -1,5 +1,7 @@
-const Page = () => {
-  return <h1>Hello World</h1>;
+import Header from '../components/header/header';
+
+const App = () => {
+  return <Header />;
 };
 
-export default Page;
+export default App;
