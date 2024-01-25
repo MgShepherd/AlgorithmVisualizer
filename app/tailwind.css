@@ -11,5 +11,6 @@
   }
   body {
     @apply bg-stone-600;
+    @apply text-white;
   }
 }
