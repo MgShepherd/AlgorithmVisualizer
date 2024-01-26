@@ -1,16 +1,16 @@
 'use client';
 
 import ElementInput from '@/elementInput/elementInput';
+import SortVisualizer from '@/sortVisualizer/sortVisualizer';
 import { useState } from 'react';
 
 const SortPage = () => {
   const [elements, setElements] = useState<number[]>([]);
 
   return (
-    <div>
-      <h1>This is the sort page</h1>
-      <p>Elements: {elements}</p>
+    <div className="flex w-full grow items-center flex-col pt-10 gap-y-5">
       <ElementInput setElements={setElements} />
+      <SortVisualizer elements={elements} />
     </div>
   );
 };

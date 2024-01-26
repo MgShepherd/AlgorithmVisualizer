@@ -29,7 +29,7 @@ const ElementInput = ({ setElements }: ElementProps) => {
   const buttonStyle = 'bg-blue-400 p-1 border-white border-2 rounded w-full';
 
   return (
-    <div className="flex w-full items-center flex-col">
+    <div>
       <div>
         <p>Enter Numbers to sort (comma seperated)</p>
         <input
@@ -47,7 +47,7 @@ const ElementInput = ({ setElements }: ElementProps) => {
           </button>
         </div>
       </div>
-      {errorMessage != '' && <p>{errorMessage}</p>}
+      <p className="text-red-400">{errorMessage}</p>
     </div>
   );
 };
