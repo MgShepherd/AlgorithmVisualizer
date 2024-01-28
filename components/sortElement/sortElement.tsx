@@ -30,6 +30,7 @@ const SortElement = ({ element, maxHeight }: SortElementProps) => {
       <div
         className="bg-blue-200 w-full"
         style={{ height: getHeight() + 'px' }}
+        data-testid="bar"
       />
       <p ref={elementRef}>{element}</p>
     </div>
