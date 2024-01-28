@@ -14,7 +14,7 @@ describe('Element Input Tests', () => {
 
     const elementTextInput = screen.getByRole('textbox');
     fireEvent.change(elementTextInput, { target: { value: testInputValue } });
-    fireEvent.click(screen.getByRole('button', { name: 'Submit Values' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Submit' }));
 
     expect(newState).toEqual(existingState.concat([31]));
   });
@@ -31,7 +31,7 @@ describe('Element Input Tests', () => {
 
     const elementTextInput = screen.getByRole('textbox');
     fireEvent.change(elementTextInput, { target: { value: testInputValue } });
-    fireEvent.click(screen.getByRole('button', { name: 'Submit Values' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Submit' }));
 
     expect(newState).toEqual(existingState.concat([7, 9, 6]));
   });
@@ -44,7 +44,7 @@ describe('Element Input Tests', () => {
 
     const elementTextInput = screen.getByRole('textbox');
     fireEvent.change(elementTextInput, { target: { value: testInputValue } });
-    fireEvent.click(screen.getByRole('button', { name: 'Submit Values' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Submit' }));
 
     expect(
       screen.findByText(
@@ -58,9 +58,7 @@ describe('Element Input Tests', () => {
 
     render(<ElementInput setElements={mockSetElements} />);
 
-    fireEvent.click(
-      screen.getByRole('button', { name: 'Clear Existing Values' }),
-    );
+    fireEvent.click(screen.getByRole('button', { name: 'Clear Existing' }));
 
     expect(mockSetElements).toHaveBeenCalledWith([]);
   });
